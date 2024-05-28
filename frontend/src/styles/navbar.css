@@ -1,0 +1,76 @@
+.navbar {
+    background-color: #333; /* Light background color */
+    padding: 10px 0; /* Padding around the navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for a subtle effect */
+  
+    /* Center the logo and links vertically */
+    display: flex;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Optional: Limit the container width */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-logo img {
+    height: 40px; /* Adjust the logo height */
+    margin-right: 20px; /* Optional: Space between logo and links */
+  }
+  
+  .nav-items {
+    list-style-type: none; /* Remove default list styles */
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-items li {
+    margin-right: 15px; /* Space between each navigation item */
+  }
+  
+  .nav-items li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+  }
+  
+  .nav-items li a {
+    color:white; /* Link text color */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: 600; /* Optional: Adjust font weight */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+  }
+  
+  .nav-items li a:hover {
+    color: #007bff; /* Link text color on hover */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Stack elements vertically on small screens */
+      align-items: flex-start; /* Align items to the start */
+    }
+  
+    .navbar-left {
+      margin-bottom: 10px; /* Optional: Space between logo and links on small screens */
+    }
+  
+    .nav-items {
+      margin-top: 10px; /* Optional: Space between logo and links on small screens */
+    }
+  
+    .nav-items li {
+      margin-right: 0; /* Remove margin between navigation items */
+      margin-bottom: 10px; /* Space between each navigation item */
+    }
+  }
+  

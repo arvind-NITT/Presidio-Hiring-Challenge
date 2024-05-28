@@ -1,0 +1,59 @@
+.property-item-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .property-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+    transition: transform 0.3s;
+  }
+  
+  .property-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .property-card h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .property-card p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .toggle-button,
+  .interest-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: background 0.3s;
+  }
+  
+  .toggle-button:hover,
+  .interest-button:hover {
+    background: #0056b3;
+  }
+  
+  .owner-details {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 4px;
+  }
+  
