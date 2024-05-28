@@ -1,15 +1,24 @@
 // Load environment variables from .env file
 import dotenv from 'dotenv';
 import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import express from 'express';
+const app = express();
+app.use(cors());
 dotenv.config();
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname,'build', 'index.html'));
+});
 
 // Import the connection function
 import dbConnection from './db/dbConnection.js';
 
 // Import any additional modules and initialize your app (e.g., Express)
-import express from 'express';
-const app = express();
-app.use(cors());
+
 // Connect to MongoDB
 //connectionDb();
 dbConnection();
@@ -30,11 +39,8 @@ app.get('/', (req, res) => {
 
 // Start the server
 const PORT = process.env.PORT || 3000;
-const frontendBuildPath = path.resolve(__dirname, "../frontend/build");
-  app.use(express.static(frontendBuildPath));
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(frontendBuildPath, "index.html"));
-  });
+
 app.listen(PORT, () => {
+  
   console.log(`Server is running on port ${PORT}`);
 });
